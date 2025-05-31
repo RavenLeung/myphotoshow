@@ -1,0 +1,50 @@
+/* 字体定义 */
+@font-face {
+  font-family: 'FangSong';
+  src: local('FangSong'),
+       local('FangSong_GB2312'),
+       local('仿宋'),
+       local('仿宋_GB2312');
+}
+
+:root {
+  /* 中文字体变量 */
+  --font-family-chinese: 'FangSong', FangSong, FangSong_GB2312, '仿宋', '仿宋_GB2312', SimSun, serif;
+  --font-family-heading: 'SimHei', '黑体', sans-serif;
+  --font-family-latin: 'Helvetica Neue', Arial, sans-serif;
+
+  /* 字体大小 */
+  --font-size-base: 16px;
+  --font-size-sm: 14px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 32px;
+
+  /* 行高 */
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.8;
+  --line-height-tight: 1.2;
+}
+
+/* 全局字体应用 */
+body {
+  font-family: var(--font-family-chinese);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+}
+
+/* 标题样式 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  line-height: var(--line-height-tight);
+}
+
+/* 正文样式 */
+.chinese-text {
+  font-family: var(--font-family-chinese);
+}
+
+/* 英文和数字样式 */
+.latin-text {
+  font-family: var(--font-family-latin);
+}
