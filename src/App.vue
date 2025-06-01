@@ -28,7 +28,7 @@ onUnmounted(() => {
         </div>
 
         <RouterLink to="/" class="logo">
-          <span class="logo-text">Raven Leung</span>
+          <span class="logo-text">RAVEN LEUNG</span>
         </RouterLink>
 
         <div class="season-nav right">
@@ -41,9 +41,8 @@ onUnmounted(() => {
           <span></span>
         </button>
 
-        <div class="nav-links" :class="{ 'is-open': isMenuOpen }">
-          <RouterLink to="/" @click="isMenuOpen = false">Home</RouterLink>
-          <RouterLink to="/about" @click="isMenuOpen = false">About</RouterLink>
+        <div class="nav-links">
+          <RouterLink to="/about" @click="isMenuOpen = false">ABOUT</RouterLink>
         </div>
       </nav>
     </header>
@@ -77,8 +76,10 @@ onUnmounted(() => {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: var(--background-color);
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
   padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .nav-container {
@@ -86,7 +87,7 @@ onUnmounted(() => {
   margin: 0 auto;
   padding: 0 var(--spacing-md);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   position: relative;
 }
@@ -94,6 +95,10 @@ onUnmounted(() => {
 .logo {
   text-align: center;
   padding: 0 var(--spacing-xl);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
   
   .logo-text {
     font-family: var(--font-family-latin);
@@ -113,11 +118,11 @@ onUnmounted(() => {
   transform: translateY(-50%);
 
   &.left {
-    left: var(--spacing-md);
+    right: calc(53% + 120px);
   }
 
   &.right {
-    right: var(--spacing-md);
+    left: calc(53% + 120px);
   }
 
   .season-link {
@@ -135,6 +140,7 @@ onUnmounted(() => {
 .nav-links {
   display: flex;
   gap: var(--spacing-md);
+  margin-left: auto;
   
   a {
     font-weight: var(--font-weight-light);
@@ -215,10 +221,13 @@ onUnmounted(() => {
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
+    position: absolute;
+    right: var(--spacing-md);
   }
 
   .nav-container {
     padding: 0;
+    justify-content: center;
   }
 
   .season-nav {
@@ -227,6 +236,9 @@ onUnmounted(() => {
 
   .logo {
     padding: var(--spacing-md);
+    position: relative;
+    left: 0;
+    transform: none;
     
     .logo-text {
       font-size: var(--font-size-lg);
@@ -237,7 +249,7 @@ onUnmounted(() => {
     display: none;
     position: fixed;
     top: 0;
-    left: 0;
+    left: 100%;
     width: 100%;
     height: 100vh;
     background-color: var(--background-color);

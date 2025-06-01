@@ -7,8 +7,7 @@
             <el-avatar :size="screenWidth <= 768 ? 120 : 150" src="https://placekitten.com/200/200" class="avatar" />
             <h1 class="chinese-text">关于摄影师</h1>
             <p class="bio chinese-text">
-              你好！我是一名热爱摄影的创作者。通过镜头，我希望能够捕捉生活中转瞬即逝的美好时刻，
-              记录下这个世界的独特视角。无论是城市的喧嚣，还是自然的静谧，我都试图用我的方式去诠释和表达。
+              我不是攝影師，我只是喜歡按快門。
             </p>
           </div>
 
