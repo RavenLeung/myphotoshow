@@ -84,12 +84,12 @@ const selectedPhoto = ref(null)
 const photos = ref([
   {
     id: 1,
-    url: 'https://placekitten.com/800/800',
-    title: '城市剪影',
-    category: 'architecture',
-    description: '现代都市建筑的几何美感',
+    url: '/src/assets/star.jpg',
+    title: '星空之美',
+    category: 'landscape',
+    description: '夜空中闪烁的星辰',
     date: '2024-01-15',
-    location: '上海'
+    location: '新疆'
   },
   {
     id: 2,

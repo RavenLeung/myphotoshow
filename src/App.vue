@@ -63,7 +63,7 @@ onUnmounted(() => {
 </template>
 
 <style lang="scss">
-@import './assets/styles/global.scss';
+@use './assets/styles/global.scss' as *;
 
 .app-container {
   min-height: 100vh;

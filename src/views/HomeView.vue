@@ -2,8 +2,8 @@
   <div class="home">
     <section class="hero">
       <div class="hero-content">
-        <h1 class="chinese-text">摄影作品集</h1>
-        <p class="chinese-text">捕捉光影，定格瞬间</p>
+        <h1 class="chinese-text">數字畫廊</h1>
+        <p class="chinese-text">模糊記憶的數字備份</p>
       </div>
     </section>
 
@@ -30,8 +30,8 @@
     <section class="about-preview">
       <div class="container">
         <div class="about-content">
-          <h2 class="chinese-text">关于摄影师</h2>
-          <p class="chinese-text">专注于捕捉生活中的细微瞬间，用独特的视角讲述每一个故事。</p>
+          <h2 class="chinese-text">碎碎念</h2>
+          <p class="chinese-text">「我沒有故事，只有一些想留存的記憶」</p>
           <RouterLink to="/about" class="learn-more chinese-text">了解更多</RouterLink>
         </div>
       </div>
@@ -45,22 +45,22 @@ import { RouterLink } from 'vue-router'
 
 const featuredPhotos = ref([
   {
-    url: 'https://placekitten.com/800/800',
-    title: '城市印象',
-    category: '街头摄影',
-    description: '都市生活中的一抹静谧'
+    url: '/src/assets/star.jpg',
+    title: 'M42',
+    category: 'Deep Space',
+    description: '猎户座大星云'
   },
   {
-    url: 'https://placekitten.com/801/801',
-    title: '自然之光',
-    category: '风光摄影',
-    description: '晨曦中的自然之美'
+    url: '/src/assets/winter.jpg',
+    title: '雪國冷湖',
+    category: 'Landsacpe',
+    description: '冰封的山河'
   },
   {
-    url: 'https://placekitten.com/802/802',
-    title: '人文瞬间',
-    category: '人像摄影',
-    description: '定格生活中的真实表情'
+    url: '/src/assets/farewell.jpg',
+    title: 'Farewell',
+    category: 'Street',
+    description: '塔斯馬尼亞渡口送別的父子'
   }
 ])
 
@@ -74,7 +74,7 @@ const showPhotoDetail = (photo) => {
 .hero {
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-              url('https://placekitten.com/1920/1080') center/cover no-repeat;
+              url('/src/assets/star.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
