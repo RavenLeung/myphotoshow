@@ -28,7 +28,7 @@ onUnmounted(() => {
         </div>
 
         <RouterLink to="/" class="logo">
-          <span class="logo-text">RAVEN LEUNG</span>
+          <span class="logo-text">Ravne Leung</span>
         </RouterLink>
 
         <div class="season-nav right">
@@ -101,12 +101,12 @@ onUnmounted(() => {
   z-index: 10;
   
   .logo-text {
-    font-family: var(--font-family-latin);
+    font-family: Georgia;
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-light);
-    letter-spacing: 0.2em;
+    letter-spacing: 2;
     color: var(--primary-color);
-    text-transform: uppercase;
+    text-transform: uppercase ;
   }
 }
 
